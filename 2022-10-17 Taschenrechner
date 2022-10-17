@@ -1,0 +1,39 @@
+########################################
+# Taschenrechner mit den Grundfunktionen
+########################################
+import os
+os.system('cls')
+schleife = True
+while schleife:
+    print(" 0 = Ende")
+    number1_input = float(input("Zahl 1: "))
+    if number1_input == 0.0:
+        schleife = False
+    else:
+        schleife2 = True
+        while schleife2:
+            calculation = input("(+-*/%)")
+            if calculation == "+" or calculation == "-" or calculation == "*" or calculation == "/" or calculation == "%":
+                schleife2 = False
+            else:
+                print("Falscher Operant. Bitte neu eingeben.")
+        
+        number2_input = float(input("Zahl 2: "))
+        if calculation == "+":
+            ergebnis = number1_input + number2_input
+            print(ergebnis )
+        elif calculation == "-":
+            ergebnis = number1_input - number2_input
+            print(ergebnis )
+        elif calculation == "*":
+            ergebnis = number1_input * number2_input
+            print(ergebnis )
+        elif calculation == "/":
+            ergebnis = number1_input / number2_input
+            print(ergebnis )
+        elif calculation == "%":
+            ergebnis = number1_input % number2_input
+            print(ergebnis )
+        else:
+            print("Falscher Operant")
+
